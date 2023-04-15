@@ -7,7 +7,6 @@ con la manipulación del DOM en la aplicación
 
 const $ = (selector) => document.querySelector(selector)
 
-const search = document.querySelector(".search")
 
 // crear nueva card
 
