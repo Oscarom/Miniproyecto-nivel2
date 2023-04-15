@@ -6,7 +6,7 @@ import dom from "./dom.js"
 const datos = await data.getData('./stays.json')
 
 // seleccionamos el contenedor de las cards
-const products = dom.$(".container")
+const estancias = dom.$(".estancias")
 
 //iteramos los objetos del array
 
@@ -16,5 +16,5 @@ datos.forEach( element => {
     console.log(element)
   
     // Agregamos el card al elemento products
-    products.appendChild(card);
+    estancias.appendChild(card);
   })

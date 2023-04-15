@@ -1,4 +1,27 @@
+.card-img-modified {
+    aspect-ratio: 1 / 1;
+  }
+  
+  .card-img {
+    max-width: 395px;
+  }
+  .card-img-modified img {
+    object-fit: cover;
+  }
 
+  .categories {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+  }
+  
+  .pointer {
+    cursor: pointer;
+  }
+
+  .menu{
+    height: 500px;
+  }
 /* Font Family 
 font-family: 'Montserrat', sans-serif;
 font-family: 'Mulish', sans-serif;
