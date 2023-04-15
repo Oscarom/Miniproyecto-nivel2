@@ -4,8 +4,11 @@ con la manipulación del DOM en la aplicación
 */
 
 //funcion para seleccionar elementos del dom
+// seleccionamos el contenedor de las cards
 
 const $ = (selector) => document.querySelector(selector)
+
+const estancias = $(".estancias")
 
 
 // crear nueva card
@@ -41,9 +44,25 @@ const newCard = (obj) => {
     `
     return div
   }
+
+  const showCards = (arr) => {
+
+    estancias.innerHTML = '';
+  
+   arr.forEach( element => {
+    // Creamos el card con la informacion del elemento
+    const card = newCard(element);
+    console.log(element)
+  
+    // Agregamos el card al elemento products
+    estancias.appendChild(card);
+  })
+  }
+  
   
   export default {
     newCard,
+    showCards,
     $,
   }
 

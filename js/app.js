@@ -2,19 +2,22 @@ import data from "./data.js"
 import dom from "./dom.js"
 
 
-// ejecuto la funcion getData para traer os datos del back y los guardo en la variable datos
+// ejecuto la funcion getData para traer los datos del back y los guardo en la variable datos
 const datos = await data.getData('./stays.json')
 
-// seleccionamos el contenedor de las cards
-const estancias = dom.$(".estancias")
+/* const countries = data.getCountries(datos); */
+
 
 //iteramos los objetos del array
 
-datos.forEach( element => {
-    // Creamos el card con la informacion del elemento
-    const card = dom.newCard(element);
-    console.log(element)
-  
-    // Agregamos el card al elemento products
-    estancias.appendChild(card);
-  })
+const searchProduct = dom.$('#searchProduct');
+
+searchProduct.addEventListener('keyup', () => {
+  let filtro = searchProduct.value;
+  console.log(filtro)
+  const filtered = filtro === '' ? datos : data.filterByName(datos, filtro); 
+
+  dom.showCards(filtered);
+})
+
+dom.showCards(datos);
