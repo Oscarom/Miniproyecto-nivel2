@@ -1,33 +1,34 @@
 import data from "./data.js";
 import dom from "./dom.js";
 
-// ejecuto la funcion getData para traer los datos del back y los guardo en la variable datos
 const datos = await data.getData("./stays.json");
 
-/* const countries = data.getCountries(datos); */
-
-//iteramos los objetos del array
-
-/* const searchProduct = dom.$('#searchProduct');
-
-searchProduct.addEventListener('keyup', () => {
-  let filtro = searchProduct.value;
-  console.log(filtro)
-  const filtered = filtro === '' ? datos : data.filterByName(datos, filtro); 
-
-  dom.showCards(filtered);
-}) */
 
 const searchProduct = dom.$("#searchProduct");
 const botonBuscar = dom.$(".boton-buscar");
+const guest = dom.$("#guest");
+
+let filtro = ""
+let numGuest = 0
 
 searchProduct.addEventListener("keyup", () => {
-  let filtro = searchProduct.value;
-
-  botonBuscar.addEventListener("click", () => {
-    const filtered = filtro === "" ? datos : data.filterByName(datos, filtro);
-    dom.showCards(filtered);
-  });
+  filtro = searchProduct.value;
+  return filtro
 });
+
+guest.addEventListener("click", () => {
+  numGuest = guest.value;
+  return numGuest
+});
+
+botonBuscar.addEventListener("click", () => {
+  const filtered = filtro === "" ? datos : data.filterByName(datos, filtro);
+  const filtered_final = data.filtrarGuest(filtered,numGuest);
+
+  dom.showCards(filtered_final);
+});
+
+
+
 
 dom.showCards(datos);

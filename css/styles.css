@@ -9,12 +9,6 @@
     object-fit: cover;
   }
 
-  .categories {
-    display: flex;
-    list-style: none;
-    gap: 1rem;
-  }
-  
   .pointer {
     cursor: pointer;
   }
