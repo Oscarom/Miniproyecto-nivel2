@@ -2,7 +2,10 @@
 font-family: 'Montserrat', sans-serif;
 }
 
-
+.info{
+  font-family: 'Mulish', sans-serif;
+  padding-top: 5px;
+}
 
 .card-img-modified {
     aspect-ratio: 1 / 1;
@@ -24,28 +27,13 @@ font-family: 'Montserrat', sans-serif;
   }
 
   .start{
-    color: red;  
+    color: red; 
   }
 
-  .superhost{
-    min-width: 30px;
-    height: 30px;
-    border: 1px solid black;
-    border-radius: 5px;
-    font-size: small;
+  .stays{
     font-weight: bold;
-    text-align: center;
-    align-items: center;
-    padding: 5px;
-    font-family: 'Mulish', sans-serif;
+  }
 
-}
-
-.stars{
-  display: flex;
-  align-items: center;
-    
-}
 
 /* Font Family 
 font-family: 'Montserrat', sans-serif;
