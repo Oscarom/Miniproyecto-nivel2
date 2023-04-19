@@ -22,9 +22,9 @@ font-family: 'Montserrat', sans-serif;
     cursor: pointer;
   }
 
-  .menu{
+ /*  .menu{
     height: 500px;
-  }
+  } */
 
   .start{
     color: red; 
@@ -34,6 +34,9 @@ font-family: 'Montserrat', sans-serif;
     font-weight: bold;
   }
 
+ .boton-buscar{
+  height: 70%;
+ }
 
 /* Font Family 
 font-family: 'Montserrat', sans-serif;

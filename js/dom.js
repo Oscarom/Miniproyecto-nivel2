@@ -7,10 +7,6 @@ const $ = (selector) => document.querySelector(selector)
 
 const estancias = $(".estancias")
 
-
-
-
-
 const newCard = (obj) => {
 
     const div = document.createElement('div');
@@ -38,8 +34,6 @@ const newCard = (obj) => {
 
     
   }
-
-
 
   const showCards = (arr) => {
    estancias.innerHTML = '';

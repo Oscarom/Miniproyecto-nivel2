@@ -5,7 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 20
+      }
+      </style>
     <!-- Link de Fuentes de Google -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,7 +36,7 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
       crossorigin="anonymous"></script>
-      <style>
+    <style>
         .material-symbols-outlined {
           font-variation-settings:
           'FILL' 1,
@@ -37,8 +45,8 @@
           'opsz' 30
         }
         </style>
-
-      <script src="https://kit.fontawesome.com/220b0193e6.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/220b0193e6.js"
+      crossorigin="anonymous"></script>
 
     <!-- Link de CSS -->
     <link rel="stylesheet" href="./css/styles.css">
@@ -64,7 +72,8 @@
 
         <p class="place p-3 m-0 cursor-text location">Add location</p>
 
-        <p id="guests"class="guest p-3 m-0 border-start border-end border-light-subtle
+        <p id="guests" class="guest p-3 m-0 border-start border-end
+          border-light-subtle
           user-select-none">Add guests</p>
 
 
@@ -72,7 +81,8 @@
         <!-- Button trigger modal -->
         <button type="button" class="btn" data-bs-toggle="modal"
           data-bs-target="#exampleModal">
-          <span class="material-symbols-outlined text-danger p-3 pointer search">
+          <span class="material-symbols-outlined text-danger p-3 pointer
+            search">
             search
           </span>
         </button>
@@ -82,21 +92,43 @@
           <div class="modal-dialog modal-fullscreen h-75">
             <div class="modal-content">
 
-              <div class="modal-body modales">
-                 
-                <input id="searchProduct" type="text" placeholder="location:">
+              <div class="modal-body modalBody">
 
-                <input id="guest" type="number" placeholder="huespedes:" min="1">
+                <div class="container-fluid">
 
-                <button type="button" class="btn btn-danger boton-buscar"data-bs-dismiss="modal">
-                 <span class="material-symbols-outlined">search</span>search
-                </button>
+                  <div class="row">
+                    <div class="borde item2 col-sm-6 col-md-4">
+                      <input id="searchProduct" type="text"
+                        placeholder="location:">
+                    </div>
+                    <div class="borde item3 col-sm-6 col-md-4">
+                      <input id="guest" type="number" placeholder="huespedes:"
+                        min="1">
+                    </div>
+
+                    <div class="borde item4 col-sm-12 col-md-4">
+                      <button type="button" class="btn btn-danger boton-buscar"
+                        data-bs-dismiss="modal">
+
+                        <span class="material-symbols-outlined">
+                          search
+                        </span>
+                        <span class="btn-s">
+                          search
+                        </span>
+                      </button>
+                    </div>
+                  </div>
+
+
+                </div>
+
 
               </div>
-              
+
             </div>
           </div>
-    
+
 
         </article>
 
@@ -108,25 +140,25 @@
 
         <div class="d-flex mt-5 justify-content-between">
 
-          <h1 class="fs-3 stays">Stays in 
-          <span id="place"></span>
-        </h1>
+          <h1 class="fs-3 stays">Stays in
+            <span id="place"></span>
+          </h1>
 
 
-        <p><span id="stays"></span> Stays</p>
+          <p><span id="stays"></span> Stays</p>
 
-      </div>
-
-      <section class="container text-center">
-        <div class="estancias d-flex flex-wrap justify-content-evenly gap-4
-          w-100%">
-
-          <!-- Aqui van los cards, cada uno debe llevar la clase 'col' -->
         </div>
-      </section>
-    </main>
 
-    <!-- FIN MAIN--------------------------------------------------------------------------------------------------------- -->
-  </body>
+        <section class="container text-center">
+          <div class="estancias d-flex flex-wrap justify-content-evenly gap-4
+            w-100%">
 
-</html>
+            <!-- Aqui van los cards, cada uno debe llevar la clase 'col' -->
+          </div>
+        </section>
+      </main>
+
+      <!-- FIN MAIN--------------------------------------------------------------------------------------------------------- -->
+    </body>
+
+  </html>
